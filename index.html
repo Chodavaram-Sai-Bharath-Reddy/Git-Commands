@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/Images/git.png">
+    <title>Git Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <img src="/Images/git.png" alt="git-image">
+            <h1>Git Commands for Beginners</h1>
+        </div>
+        <div class="about">
+            <h2>GIT : </h2>
+            <p>Git is a distributed version control system (VCS) for tracking changes in any set of files, originally designed for coordinating work amoung programmers coorperating on source code during software development.It Goals include speed, data integrity and support for distributed, non-linear workflows</p>
+            <h2>GITHUB :</h2>
+            <p>GITHUB is a subsidary of <q><b>Microsoft</b></q> which provides hosting for software development and version control using git. It offers the distributed version control and source code management functionality of git. It lets the people work on files and easily merge their changes in with the master/main branch of the project</p>
+        </div>
+        <div class="installation">
+            <h2>Installation :</h2>
+            <ul>
+                <li>
+                    <p>Navigate to <a href="https://git-scm.com/downloads" target="_blank">git-scm</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Download latest git version to your local machine</p>
+                </li>
+                <li>
+                    <p>Install git</p>
+                </li>
+            </ul>
+        </div>
+        <div class="commands">
+            <h2>Commands :</h2>
+            <p>open command prompt (cmd) / git bash</p>
+            <table class="table">
+                <tr>
+                    <td>git --version</td>
+                    <td>It gives the current installed version which is in our local machine</td>
+                </tr>
+                <tr>
+                    <td>git config --global user.name “your user name”</td>
+                    <td>sets your username to git in your local machine</td>
+                </tr>
+                <tr>
+                    <td>git config --global user.email “your mail id”</td>
+                    <td>will set your email to git in your local machine</td>
+                </tr>
+                <tr>
+                    <td>git init</td>
+                    <td>initializes git in local folder, it creates .git folder in which you have initialized this command</td>
+                </tr>
+                <tr>
+                    <td>git status</td>
+                    <td>represents the file status i.e; untracked, staging and commit</td>
+                </tr>
+                <tr>
+                    <td>git add "filename"</td>
+                    <td>add the file in the working directory to staging area</td>
+                </tr>
+                <tr>
+                    <td>git add <b style="font-size: 1.2rem;">.</b></td>
+                    <td>add all the files in the working directory to staging area</td>
+                </tr>
+                <tr>
+                    <td>git commit -m “commit message”</td>
+                    <td>This command will commit all the files which are in staging area</td>
+                </tr>
+                <tr>
+                    <td>git commit --amend -m "commit message"</td>
+                    <td>used to change commit message</td>
+                </tr>
+                <tr>
+                    <td>git log</td>
+                    <td>it will give the commit log in chronological order</td>
+                </tr>
+                <tr>
+                    <td>git log --oneline</td>
+                    <td>describes the commit messages in a short manner</td>
+                </tr>
+                <tr>
+                    <td>git log --until = “Date”</td>
+                    <td>generates commit message from starting to the
+                        given date</td>
+                </tr>
+                <tr>
+                    <td>git rev-list HEAD --count</td>
+                    <td>returns the count of commit messages</td>
+                </tr>
+                <tr>
+                    <td>git checkout "7characters sha key"></td>
+                    <td>jumps to the respective commit</td>
+                </tr>
+                <tr>
+                    <td>git checkout "main/master"</td>
+                    <td>get you to the main/master branch of project.</td>
+                </tr>
+                <tr>
+                    <td>git checkout "branch name"</td>
+                    <td>takes you to another branch which you
+                        have given the branch name</td>
+                </tr>
+                <tr>
+                    <td>git remote</td>
+                    <td>we can check the remotes available in the folder or repository</td>
+                </tr>
+                <tr>
+                    <td>git remote add "remote name" "url"</td>
+                    <td>adds new remote</td>
+                </tr>
+                <tr>
+                    <td>git remote -v</td>
+                    <td>displays the current url which it holds</td>
+                </tr>
+                <tr>
+                    <td>git push "remote name" "branch"</td>
+                    <td>pushes all your local files to the
+                        github repository(if you are using github as vcs).
+                    </td>
+                </tr>
+                <tr>
+                    <td>git pull "remote name" "branch name"</td>
+                    <td>will synchronize the local repository
+                        with git repository</td>
+                </tr>
+                <tr>
+                    <td>git fetch "remote"</td>
+                    <td>Fetch all of the branches from the repository. This also downloads all of the required commits and files from the other repository.</td>
+                </tr>
+                <tr>
+                    <td>git fetch "remote name" "branch name"</td>
+                    <td>Same as the above command, but only fetch the specified branch.</td>
+                </tr>
+                <tr>
+                    <td>git branch</td>
+                    <td>throws the number of branches available in
+                        our local repository</td>
+                </tr>
+                <tr>
+                    <td>git branch "new branch name"</td>
+                    <td>creates the new branch</td>
+                </tr>
+                <tr>
+                    <td>git merge "branch name"</td>
+                    <td>used to merge current branch to master/main</td>
+                </tr>
+                <tr>
+                    <td>git reset --hard HEAD^</td>
+                    <td>deletes latest commit</td>
+                </tr>
+                <tr>
+                    <td>git reset --hard HEAD~"number"</td>
+                    <td>deletes number of commits form counting from head</td>
+                </tr>
+                <tr>
+                    <td>git rebase --onto "branch name"~"number1" "branch name"~"number2" "branch name"</td>
+                    <td>deletes specific commit </td>
+                </tr>
+                <tr>
+                    <td>git branch -d "branch name"</td>
+                    <td>deletes the brach in local after merging</td>
+                </tr>
+                <tr>
+                    <td>git branch -D "branch name"</td>
+                    <td>deletes the branch in local without merge</td>
+                </tr>
+                <tr>
+                    <td>git push "remote name" --delete "branch name"</td>
+                    <td>deletes branch in remote</td>
+                </tr>
+                <tr>
+                    <td>git show</td>
+                    <td>used to view expanded details on Git objects such as blobs, trees, tags, and commits</td>
+                </tr>
+                <tr>
+                    <td>git clean -n</td>
+                    <td>to see dry run</td>
+                </tr>
+                <tr>
+                    <td>git clean -f</td>
+                    <td>force to remov untracked files</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
